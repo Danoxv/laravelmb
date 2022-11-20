@@ -1,17 +1,19 @@
 {
-    "name": "danoxv/laravelmb",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Danoxv\\Laravelmb\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "A package of unicode methods"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {}
+	"name": "danoxv/laravelmb",
+	"type": "library",
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Danoxv\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "A package of unicode methods"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {
+		"voku/portable-utf8": "dev-master"
+	}
 }
