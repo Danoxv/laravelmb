@@ -14,6 +14,7 @@
 	],
 	"minimum-stability": "dev",
 	"require": {
-		"voku/portable-utf8": "dev-master"
+		"voku/portable-utf8": "dev-master",
+		"illuminate/support": "10.x-dev"
 	}
 }

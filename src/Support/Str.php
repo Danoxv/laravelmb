@@ -4,13 +4,19 @@ namespace Danoxv\Support;
 
 use voku\helper\UTF8;
 
-class Str
+class Str extends \Illuminate\Support\Str
 {
-    public function strlen(string $string): int
+    /**
+     * Replace text within a portion of a string.
+     *
+     * @param  string|string[]  $string
+     * @param  string|string[]  $replace
+     * @param  int|int[]  $offset
+     * @param  int|int[]|null  $length
+     * @return string|string[]
+     */
+    public static function substrReplace($string, $replace, $offset = 0, $length = null)
     {
-        return UTF8::strlen($string);
+        return UTF8::substr_replace($string, $replace, $offset, $length);
     }
 }
-
-$str = new Str();
-$str->strlen('Привет');
