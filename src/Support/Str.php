@@ -4,29 +4,19 @@ namespace Danoxv\Support;
 
 use voku\helper\UTF8;
 
-class Str
+class Str extends \Illuminate\Support\Str
 {
-    public function strLen(string $string): int
+    /**
+     * Replace text within a portion of a string.
+     *
+     * @param  string|string[]  $string
+     * @param  string|string[]  $replace
+     * @param  int|int[]  $offset
+     * @param  int|int[]|null  $length
+     * @return string|string[]
+     */
+    public static function substrReplace($string, $replace, $offset = 0, $length = null)
     {
-        return UTF8::strlen($string);
-    }
-
-    public function strToUpper(string $string): string
-    {
-        return UTF8::strtoupper($string);
-    }
-
-    public function ascii($value, $language = 'en'): string
-    {
-        return UTF8::to_ascii((string)$value, $language);
-    }
-
-    public function finish(string $value, string $cap): string
-    {
-        return UTF8::str_ensure_right($value, $cap);
-    }
-    public function firstChar(string $string): string
-    {
-        return UTF8::first_char($string);
+        return UTF8::substr_replace($string, $replace, $offset, $length);
     }
 }
